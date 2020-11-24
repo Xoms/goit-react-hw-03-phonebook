@@ -1,0 +1,23 @@
+.contacts-form {
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    width: 500px;
+}
+.contacts-form__label{
+    display: block;
+    margin-bottom: 5px;
+}
+.contacts-form__submit-btn{
+    border-radius: 5px;
+}
+
+.contacts-form__group{
+    margin-bottom: 20px;
+}
+
+.err-msg{
+    display: block;
+    color: orangered;
+}
