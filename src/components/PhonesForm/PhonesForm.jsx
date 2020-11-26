@@ -11,20 +11,10 @@ class PhonesForm extends Component  {
   }
 
   changeHandler = ({target}) => {
-    this.setState(state => {
-
-      if (target.id === "contactName"){
-        return {
-          name: target.value
-        }
+    this.setState( () => {
+      return {
+        [target.name]: target.value
       }
-
-      if (target.id === "contactNumber"){
-        return {
-          number: target.value
-        }
-      }
-      
     })
   }
 
@@ -58,7 +48,6 @@ class PhonesForm extends Component  {
   }
 
   render(){
-    console.log(this.state);
     const {name, number, isExist} = this.state
     return (
       <form className="contacts-form" onSubmit={this.submitHandler}>
@@ -68,6 +57,7 @@ class PhonesForm extends Component  {
           <input className="contacts-form__input" 
             onChange={this.changeHandler} 
             id="contactName"
+            name="name"
             value={name}/>
         </div>
 
@@ -77,6 +67,7 @@ class PhonesForm extends Component  {
             className="contacts-form__input" 
             onChange={this.changeHandler} 
             id="contactNumber"
+            name="number"
             value={number}/>
         </div>
 

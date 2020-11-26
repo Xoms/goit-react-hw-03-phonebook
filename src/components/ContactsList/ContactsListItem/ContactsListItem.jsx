@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import './ContactsListItem.scss';
 
 
-const ContactsListItem = ({name, number, onDelete}) => (
+const ContactsListItem = ({id, name, number, onDelete}) => (
   <li className="contacts-list__item">
     <span className="contacts-list__item-text">{name}: {number}</span>
-    <button type="button" onClick={onDelete} className="contacts-list__item-btn">Delete</button>
+    <button type="button" onClick={() => onDelete(id)} className="contacts-list__item-btn">Delete</button>
   </li>
 );
 

@@ -56,7 +56,7 @@ class App extends Component {
     const {contacts, filter} = this.state
     const visibleContacts = contacts.filter(({name}) => name.toLowerCase().includes(filter.toLowerCase()) )
     return (
-      <Container className="container feedback">
+      <Container className="container phonebook">
         <Title title="Phonebook"/>
         <PhonesForm onContactAdd={this.onContactAdd} contacts={contacts}/>
         <Title title="Contacts" />
